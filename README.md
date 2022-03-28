@@ -2,7 +2,6 @@
 
 ## After Cloning
 
-````
 **Install all the dependencies using composer**
 ````
   composer install
