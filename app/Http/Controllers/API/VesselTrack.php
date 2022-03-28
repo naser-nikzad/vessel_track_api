@@ -84,7 +84,7 @@ class VesselTrack extends Controller
             $user->count_last_hour += 1;
 
             // Restart counter in the new hour.
-            if(strtotime($user->updated_at) < strtotime("-40 seconds")) {
+            if(strtotime($user->updated_at) < strtotime("-60 minutes")) {
                 $user->count_last_hour = 1;
             }
             
