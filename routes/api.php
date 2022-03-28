@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\VesselTrack;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::group([
+    'middleware' => 'api',
+], function ($router) {
+    
+    Route::get('vessel-list', [VesselTrack::class,'index']);
+    Route::post('upload', [VesselTrack::class,'upload']);
+
+}); 
+  
