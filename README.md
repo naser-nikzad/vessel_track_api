@@ -41,3 +41,15 @@
   php artisan serve
 
 ````
+
+**Route for retrieving data in different contentTypes**
+````
+  http://{{base_url}}/api/vessel-list  {with mmsi, time range filters}, also if csv flag passed as true, result comes in csv
+
+````
+
+**Route for uploading json file, sampleFile.json is the template used**
+````
+  http://{{base_url}}/api/upload {with request limit per user to 10/hour}
+  
+````
